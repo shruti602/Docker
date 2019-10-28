@@ -1,0 +1,24 @@
+
+172.31.38.112 ip-172-31-38-112.ap-south-1.compute.internal
+
+172.31.47.176 ip-172-31-47-176.ap-south-1.compute.internal
+
+172.31.32.164 ip-172-31-32-164.ap-south-1.compute.internal
+
+
+kubeadm init --apiserver-advertise-address=172.31.38.112 --pod-network-cidr=172.31.0.0/16
+
+
+
+
+172.31.0.0/16
+
+
+https://www.howtoforge.com/tutorial/centos-kubernetes-docker-cluster/
+
+
+curl 172.31.47.176:30709
+
+kubeadm join 172.31.38.112:6443 --token crg5v5.t7j9irm4o27btls2 \ --discovery-token-ca-cert-hash sha256:889aa4aef3839f621a8e699fe14ef44590ac8f69ca21a24a640335a8e5c380ea
+
+kubectl get deployment nginx -o yaml
